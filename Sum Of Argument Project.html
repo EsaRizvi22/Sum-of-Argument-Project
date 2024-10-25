@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arguments Project</title>
+</head>
+
+<body>
+    <h2>Project</h2>
+
+    <div id="output"></div>
+    
+    <script>
+        // Numbers to process
+        const numbers = [8, 12, 5, 20];
+
+        // Function to calculate the sum of numbers
+        function calculateSum(numbers) {
+            return numbers.reduce((total, num) => total + num, 0);
+        }
+
+        // Function to find the greatest number
+        function findGreatest(numbers) {
+            return Math.max(...numbers);
+        }
+
+        // Display results
+        const outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = `
+                <p>Numbers: ${numbers.join(", ")}</p>
+                <p>Sum of Numbers: ${calculateSum(numbers)}</p>
+                <p>Greatest Number: ${findGreatest(numbers)}</p>
+            `;
+    </script>
+    </body>
+    
+    </html>
